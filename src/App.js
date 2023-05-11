@@ -1,23 +1,14 @@
-import logo from './logo.svg';
+import React from "react";
+import Weatherinfo from "./components/weatherinfo";
 import './App.css';
 
+const API_KEY = "55c01dd04aa12c3f115a09b944382137"; // Replace with your own API key
+
 function App() {
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="h-screen w-screen main-container">
+      <Weatherinfo />
     </div>
   );
 }
