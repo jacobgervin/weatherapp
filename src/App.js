@@ -66,10 +66,6 @@ function App() {
     );
   }
 
-
-  console.log(forecastData)
-
-
   return (
     <div className="h-screen w-screen main-container overflow-hidden">
     <Search onSubmit={handleSubmit} />
