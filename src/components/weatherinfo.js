@@ -43,13 +43,12 @@ function Weatherinfo({ weatherData, forecastData }) {
     
 
   return (
-    <div className="h-screen w-screen flex flex-col items-center">
-        <div className="container flex flex-col md:items-center">
+    <div className="h-5/6 md:h-4/5 flex flex-col justify-between">
         <div className="flex flex-col ml-5 md:ml-0 md:items-center">
             <h1 className=" text-4xl md:text-9xl font-extrabold uppercase">{weatherData.name}</h1>
             <h2 className="text-lg font-thin uppercase">{countryName}</h2>
         </div>
-        <div className="w-full flex flex-col md:flex-row justify-evenly md:mt-20 ml-5 md:ml-0 ">
+        <div className="w-full flex flex-col md:flex-row justify-evenly  ml-5 md:ml-0 ">
             <div className="grid gap-2 grid-cols-2 mt-10 md:mt-0">
                 <div className="col-span-2">
                     <p className="font-bold">FEELS LIKE</p>
@@ -82,7 +81,7 @@ function Weatherinfo({ weatherData, forecastData }) {
                 </div>
             </div>
         </div>
-        <div className="w-full flex justify-evenly flex-row bottom-8 absolute">
+        <div className="w-full flex justify-evenly flex-row ">
         {Object.keys(forecastData).map((date) => {
           const forecast = forecastData[date];
           return (
@@ -98,7 +97,6 @@ function Weatherinfo({ weatherData, forecastData }) {
           );
         })}
                      
-        </div>
         </div>
     </div>
   );
