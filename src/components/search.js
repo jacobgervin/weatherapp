@@ -21,7 +21,7 @@ function Search({ onSubmit }) {
   
     // Make a request to the OpenWeatherMap Geocoding API to get location suggestions
     const response = await fetch(
-      `http://api.openweathermap.org/geo/1.0/direct?q=${encodeURIComponent(
+      `https://api.openweathermap.org/geo/1.0/direct?q=${encodeURIComponent(
         query
       )}&limit=5&appid=55c01dd04aa12c3f115a09b944382137`
     );
@@ -57,7 +57,7 @@ function Search({ onSubmit }) {
           </button>
         </form>
         {suggestions.length > 0 && (
-          <ul className="absolute top-16 min-w-44 md:mr-24 bg-white rounded-md overflow-hidden z-10">
+          <ul className="absolute top-16 min-w-44 bg-white rounded-md overflow-hidden z-10">
             {suggestions.map((suggestion, index) => (
               <li
                 key={index}
