@@ -59,7 +59,7 @@ function App() {
 
   if (error) {
     return (
-      <div className="h-screen w-screen flex flex-col items-center justify-center">
+      <div className="h-screen w-screen flex flex-col items-center">
         <Search onSubmit={handleSubmit} api />
         <p>{error}</p>
       </div>
@@ -72,8 +72,14 @@ function App() {
 
   return (
     <div className="h-screen w-screen main-container overflow-hidden">
-      <Search onSubmit={handleSubmit} />
-      {weatherData && <Weatherinfo weatherData={weatherData} forecastData={forecastData} />}
+    <Search onSubmit={handleSubmit} />
+      {weatherData ? (
+      <Weatherinfo weatherData={weatherData} forecastData={forecastData} />
+    ) : (
+      <>
+        <h1 className="text-5xl md:text-9xl font-extrabold text-center my-24 uppercase">Weather App</h1>
+      </>
+    )}
     </div>
   );
 }

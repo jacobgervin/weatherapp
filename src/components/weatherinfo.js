@@ -18,7 +18,8 @@ function Weatherinfo({ weatherData, forecastData }) {
     // Convert the country code to a country name
     const countryName = getName(countryCode);
 
-    const dateOptions = { weekday: "long" };
+    const dateOptions = { weekday: "short" };
+    
 
     const getWeatherIcon = (weatherId) => {
         if (weatherId >= 200 && weatherId <= 232) {
