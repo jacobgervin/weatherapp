@@ -39,8 +39,8 @@ function Search({ onSubmit }) {
   };
 
   return (
-    <div className="w-screen">
-      <div className="h-20 w-screen flex flex-row md:justify-center ml-5 items-center">
+    <div className="h-[10vh] w-screen">
+      <div className="w-screen h-full flex flex-row md:justify-center ml-5 items-center">
         <form
           className="flex flex-row items-center space-x-1 border-b-2 border-slate-800"
           onSubmit={handleSubmit}

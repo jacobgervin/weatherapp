@@ -43,7 +43,7 @@ function Weatherinfo({ weatherData, forecastData }) {
     
 
   return (
-    <div className="h-full flex flex-col justify-between">
+    <div className="h-[90vh] flex flex-col justify-between">
         <div className="flex flex-col ml-5 md:ml-0 md:items-center">
             <h1 className=" text-4xl md:text-9xl font-extrabold uppercase">{weatherData.name}</h1>
             <h2 className="text-lg font-thin uppercase">{countryName}</h2>
@@ -51,16 +51,16 @@ function Weatherinfo({ weatherData, forecastData }) {
         <div className="w-full flex flex-col md:flex-row justify-evenly  ml-5 md:ml-0 ">
             <div className="grid gap-2 grid-cols-2 mt-10 md:mt-0">
                 <div className="col-span-2">
-                    <p className="font-bold">FEELS LIKE</p>
-                    <p className="font-light">{feelsLike}°</p>
+                    <p className="font-bold text-2xl">FEELS LIKE</p>
+                    <p className="font-light c">{feelsLike}°</p>
                 </div>
                 <div>
-                    <p className="font-bold">SUNRISE</p>
-                    <div className="flex flex-row items-center space-x-1"><p className="font-light">{sunriseString}</p><div className="w-4 h-4"><svg viewBox="0 0 18 16" fill="#313131" xmlns="http://www.w3.org/2000/svg"><path d="M17.5 14.5H15.3438L16.25 13.125C16.5 12.7812 16.5312 12.3125 16.375 11.9375C16.2188 11.5625 15.875 11.25 15.4688 11.1875L13.25 10.7188L12.8125 8.5C12.7188 8.09375 12.4375 7.75 12.0312 7.59375C11.6562 7.4375 11.2188 7.46875 10.875 7.71875L8.96875 8.9375L7.09375 7.71875C6.40625 7.25 5.34375 7.6875 5.15625 8.5L4.71875 10.7188L2.5 11.1562C2.09375 11.25 1.75 11.5312 1.59375 11.9375C1.4375 12.3125 1.46875 12.75 1.71875 13.0938L2.625 14.5H0.5C0.21875 14.5 0 14.75 0 15V15.5C0 15.7812 0.21875 16 0.5 16H17.5C17.75 16 18 15.7812 18 15.5V15C18 14.75 17.75 14.5 17.5 14.5ZM7.3125 14.5C7.46875 14.0312 7.8125 13.5938 8.3125 13.4062C9.21875 13.0312 10.25 13.4688 10.625 14.3438C10.625 14.4062 10.6562 14.4688 10.6562 14.5H7.3125ZM13.5625 14.5H12.1875C12.1562 14.25 12.0938 14 12 13.7812C11.3125 12.125 9.40625 11.3125 7.75 12C6.65625 12.4688 5.96875 13.4375 5.78125 14.5H4.4375L3.15625 12.5625L6 12L6.5625 9.15625L9 10.75L11.4062 9.15625L12 12L14.8125 12.5938L13.5625 14.5ZM5.9375 4.25C6.125 4.4375 6.4375 4.4375 6.625 4.25L8.25 2.65625V6C8.25 6.28125 8.46875 6.5 8.75 6.5H9.25C9.5 6.5 9.75 6.28125 9.75 6V2.65625L11.3438 4.25C11.5312 4.4375 11.8438 4.4375 12.0312 4.25L12.4062 3.90625C12.5938 3.6875 12.5938 3.375 12.375 3.1875L9.34375 0.15625C9.15625 -0.03125 8.8125 -0.03125 8.625 0.15625L5.59375 3.1875C5.375 3.375 5.375 3.6875 5.5625 3.90625L5.9375 4.25Z" ></path></svg></div></div>
+                    <p className="font-bold text-2xl">SUNRISE</p>
+                    <div className="flex flex-row items-center space-x-1"><p className="font-light text-xl">{sunriseString}</p><div className="w-4 h-4"><svg viewBox="0 0 18 16" fill="#313131" xmlns="http://www.w3.org/2000/svg"><path d="M17.5 14.5H15.3438L16.25 13.125C16.5 12.7812 16.5312 12.3125 16.375 11.9375C16.2188 11.5625 15.875 11.25 15.4688 11.1875L13.25 10.7188L12.8125 8.5C12.7188 8.09375 12.4375 7.75 12.0312 7.59375C11.6562 7.4375 11.2188 7.46875 10.875 7.71875L8.96875 8.9375L7.09375 7.71875C6.40625 7.25 5.34375 7.6875 5.15625 8.5L4.71875 10.7188L2.5 11.1562C2.09375 11.25 1.75 11.5312 1.59375 11.9375C1.4375 12.3125 1.46875 12.75 1.71875 13.0938L2.625 14.5H0.5C0.21875 14.5 0 14.75 0 15V15.5C0 15.7812 0.21875 16 0.5 16H17.5C17.75 16 18 15.7812 18 15.5V15C18 14.75 17.75 14.5 17.5 14.5ZM7.3125 14.5C7.46875 14.0312 7.8125 13.5938 8.3125 13.4062C9.21875 13.0312 10.25 13.4688 10.625 14.3438C10.625 14.4062 10.6562 14.4688 10.6562 14.5H7.3125ZM13.5625 14.5H12.1875C12.1562 14.25 12.0938 14 12 13.7812C11.3125 12.125 9.40625 11.3125 7.75 12C6.65625 12.4688 5.96875 13.4375 5.78125 14.5H4.4375L3.15625 12.5625L6 12L6.5625 9.15625L9 10.75L11.4062 9.15625L12 12L14.8125 12.5938L13.5625 14.5ZM5.9375 4.25C6.125 4.4375 6.4375 4.4375 6.625 4.25L8.25 2.65625V6C8.25 6.28125 8.46875 6.5 8.75 6.5H9.25C9.5 6.5 9.75 6.28125 9.75 6V2.65625L11.3438 4.25C11.5312 4.4375 11.8438 4.4375 12.0312 4.25L12.4062 3.90625C12.5938 3.6875 12.5938 3.375 12.375 3.1875L9.34375 0.15625C9.15625 -0.03125 8.8125 -0.03125 8.625 0.15625L5.59375 3.1875C5.375 3.375 5.375 3.6875 5.5625 3.90625L5.9375 4.25Z" ></path></svg></div></div>
                 </div>
                 <div>
-                    <p className="font-bold">SUNSET</p>
-                    <div className="flex flex-row items-center space-x-1"><p className="font-light">{sunsetString}</p><div className="w-4 h-4"><svg viewBox="0 0 18 16" fill="#313131" xmlns="http://www.w3.org/2000/svg"><path d="M17.5 14.5H15.3438L16.25 13.125C16.5 12.7812 16.5312 12.3125 16.375 11.9375C16.2188 11.5625 15.875 11.25 15.4688 11.1875L13.25 10.7188L12.8125 8.5C12.7188 8.09375 12.4375 7.75 12.0312 7.59375C11.6562 7.4375 11.2188 7.46875 10.875 7.71875L8.96875 8.9375L7.09375 7.71875C6.40625 7.25 5.34375 7.6875 5.15625 8.5L4.71875 10.7188L2.5 11.1562C2.09375 11.25 1.75 11.5312 1.59375 11.9375C1.4375 12.3125 1.46875 12.75 1.71875 13.0938L2.625 14.5H0.5C0.21875 14.5 0 14.75 0 15V15.5C0 15.7812 0.21875 16 0.5 16H17.5C17.75 16 18 15.7812 18 15.5V15C18 14.75 17.75 14.5 17.5 14.5ZM7.3125 14.5C7.46875 14.0312 7.8125 13.5938 8.3125 13.4062C9.21875 13.0312 10.25 13.4688 10.625 14.3438C10.625 14.4062 10.6562 14.4688 10.6562 14.5H7.3125ZM13.5625 14.5H12.1875C12.1562 14.25 12.0938 14 12 13.7812C11.3125 12.125 9.40625 11.3125 7.75 12C6.65625 12.4688 5.96875 13.4375 5.78125 14.5H4.4375L3.15625 12.5625L6 12L6.5625 9.15625L9 10.75L11.4062 9.15625L12 12L14.8125 12.5938L13.5625 14.5ZM8.625 6.375C8.8125 6.5625 9.15625 6.5625 9.34375 6.375L12.375 3.34375C12.5938 3.15625 12.5938 2.8125 12.4062 2.625L12.0312 2.28125C11.8438 2.09375 11.5312 2.09375 11.3438 2.28125L9.75 3.875V0.5C9.75 0.25 9.5 0 9.25 0H8.75C8.46875 0 8.25 0.25 8.25 0.5V3.875L6.625 2.28125C6.4375 2.09375 6.125 2.09375 5.9375 2.28125L5.59375 2.625C5.375 2.84375 5.375 3.15625 5.59375 3.34375L8.625 6.375Z" ></path></svg></div></div>
+                    <p className="font-bold text-2xl">SUNSET</p>
+                    <div className="flex flex-row items-center space-x-1"><p className="font-light text-xl">{sunsetString}</p><div className="w-4 h-4"><svg viewBox="0 0 18 16" fill="#313131" xmlns="http://www.w3.org/2000/svg"><path d="M17.5 14.5H15.3438L16.25 13.125C16.5 12.7812 16.5312 12.3125 16.375 11.9375C16.2188 11.5625 15.875 11.25 15.4688 11.1875L13.25 10.7188L12.8125 8.5C12.7188 8.09375 12.4375 7.75 12.0312 7.59375C11.6562 7.4375 11.2188 7.46875 10.875 7.71875L8.96875 8.9375L7.09375 7.71875C6.40625 7.25 5.34375 7.6875 5.15625 8.5L4.71875 10.7188L2.5 11.1562C2.09375 11.25 1.75 11.5312 1.59375 11.9375C1.4375 12.3125 1.46875 12.75 1.71875 13.0938L2.625 14.5H0.5C0.21875 14.5 0 14.75 0 15V15.5C0 15.7812 0.21875 16 0.5 16H17.5C17.75 16 18 15.7812 18 15.5V15C18 14.75 17.75 14.5 17.5 14.5ZM7.3125 14.5C7.46875 14.0312 7.8125 13.5938 8.3125 13.4062C9.21875 13.0312 10.25 13.4688 10.625 14.3438C10.625 14.4062 10.6562 14.4688 10.6562 14.5H7.3125ZM13.5625 14.5H12.1875C12.1562 14.25 12.0938 14 12 13.7812C11.3125 12.125 9.40625 11.3125 7.75 12C6.65625 12.4688 5.96875 13.4375 5.78125 14.5H4.4375L3.15625 12.5625L6 12L6.5625 9.15625L9 10.75L11.4062 9.15625L12 12L14.8125 12.5938L13.5625 14.5ZM8.625 6.375C8.8125 6.5625 9.15625 6.5625 9.34375 6.375L12.375 3.34375C12.5938 3.15625 12.5938 2.8125 12.4062 2.625L12.0312 2.28125C11.8438 2.09375 11.5312 2.09375 11.3438 2.28125L9.75 3.875V0.5C9.75 0.25 9.5 0 9.25 0H8.75C8.46875 0 8.25 0.25 8.25 0.5V3.875L6.625 2.28125C6.4375 2.09375 6.125 2.09375 5.9375 2.28125L5.59375 2.625C5.375 2.84375 5.375 3.15625 5.59375 3.34375L8.625 6.375Z" ></path></svg></div></div>
                 </div>
             </div>
             <div className="flex flex-row md:justify-center order-first md:order-none">
@@ -68,25 +68,27 @@ function Weatherinfo({ weatherData, forecastData }) {
             </div>
             <div className="grid gap-2 grid-cols-2 mt-6 md:mt-0">
                 <div className="col-span-2">
-                    <p className="font-bold">WEATHER</p>
-                    <div className="flex flex-row items-center space-x-1"><p className="font-light">{weatherData.weather[0].description}</p><div className="w-3 h-3">{getWeatherIcon(weatherData.weather[0].id)}</div></div>
+                    <p className="font-bold text-2xl">WEATHER</p>
+                    <div className="flex flex-row items-center space-x-1"><p className="font-light text-xl">{weatherData.weather[0].description}</p><div className="w-3 h-3">{getWeatherIcon(weatherData.weather[0].id)}</div></div>
                 </div>
                 <div>
-                    <p className="font-bold">WIND</p>
-                    <p className="font-light">{weatherData.wind.speed} m/s</p>
+                    <p className="font-bold text-2xl">WIND</p>
+                    <p className="font-light text-xl">{weatherData.wind.speed} m/s</p>
                 </div>
                 <div>
-                    <p className="font-bold">HUMIDITY</p>
-                    <p className="font-light">{weatherData.main.humidity}%</p>
+                    <p className="font-bold text-2xl">HUMIDITY</p>
+                    <p className="font-light text-xl">{weatherData.main.humidity}%</p>
                 </div>
             </div>
         </div>
-        <div className="w-full flex justify-evenly flex-row ">
+        <div className="mb-10 flex flex-col md:items-center">
+        <h3 className="text-2xl md:ml-0 ml-5 mb-2 md:mb-5 font-bold">FORECAST</h3>
+        <div className="w-full flex justify-evenly flex-row ">    
         {Object.keys(forecastData).map((date) => {
           const forecast = forecastData[date];
           return (
             <div key={date}>
-                <div className="grid gap-2 grid-cols-2 justify-center" >
+                <div className="grid gap-2 grid-cols-2 justify-center justify-items-center" >
                     
                     <div className="col-span-2"><p className="md:text-2xl">{new Date(forecast.dt_txt).toLocaleDateString("en-US", dateOptions)}</p></div>
                     <div className="col-span-2 flex flex-row items-center space-x-2"><p className="md:text-xl">{Math.round(forecast.main.temp)}°</p> <div className="h-3 w-3 md:h-6 md:w-6">{getWeatherIcon(forecast.weather[0].id)}</div></div>
@@ -97,6 +99,7 @@ function Weatherinfo({ weatherData, forecastData }) {
           );
         })}
                      
+        </div>
         </div>
     </div>
   );
