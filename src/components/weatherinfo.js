@@ -43,7 +43,7 @@ function Weatherinfo({ weatherData, forecastData }) {
     
 
   return (
-    <div className="h-5/6 md:h-4/5 flex flex-col justify-between">
+    <div className="h-full flex flex-col justify-between">
         <div className="flex flex-col ml-5 md:ml-0 md:items-center">
             <h1 className=" text-4xl md:text-9xl font-extrabold uppercase">{weatherData.name}</h1>
             <h2 className="text-lg font-thin uppercase">{countryName}</h2>
