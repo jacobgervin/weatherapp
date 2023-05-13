@@ -67,7 +67,7 @@ function App() {
   }
 
   return (
-    <div className="h-screen w-screen main-container overflow-hidden">
+    <div className="max-h-screen min-h-screen w-screen main-container overflow-hidden">
     <Search onSubmit={handleSubmit} />
       {weatherData ? (
       <Weatherinfo weatherData={weatherData} forecastData={forecastData} />
