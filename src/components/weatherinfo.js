@@ -48,8 +48,8 @@ function Weatherinfo({ weatherData, forecastData }) {
             <h1 className=" text-4xl md:text-9xl font-extrabold uppercase">{weatherData.name}</h1>
             <h2 className="text-lg font-thin uppercase">{countryName}</h2>
         </div>
-        <div className="w-full flex flex-col md:flex-row justify-evenly h-[60vh] ml-5 md:ml-0 ">
-            <div className="grid gap-2 grid-cols-2  md:mt-0">
+        <div className="w-full flex flex-col md:items-center md:flex-row justify-evenly h-[60vh] ml-5 md:ml-0 ">
+            <div className="grid h-fit gap-2 grid-cols-2  md:mt-0">
                 <div className="col-span-2">
                     <p className="font-bold text-2xl">FEELS LIKE</p>
                     <p className="font-light c">{feelsLike}°</p>
@@ -66,7 +66,7 @@ function Weatherinfo({ weatherData, forecastData }) {
             <div className="flex flex-row md:justify-center order-first md:order-none">
                 <h2 className="font-extrabold text-9xl">{temperature}°</h2>
             </div>
-            <div className="grid gap-2 grid-cols-2 md:mt-0">
+            <div className="grid h-fit gap-2 grid-cols-2 md:mt-0">
                 <div className="col-span-2">
                     <p className="font-bold text-2xl">WEATHER</p>
                     <div className="flex flex-row items-center space-x-1"><p className="font-light text-xl">{weatherData.weather[0].description}</p><div className="w-3 h-3">{getWeatherIcon(weatherData.weather[0].id)}</div></div>
